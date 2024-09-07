@@ -1,0 +1,532 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: iransans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/IRANSansWeb-Light.woff2");
+  src: url("./fonts/IRANSansWeb-Light.woff");
+  src: url("./fonts/IRANSansWeb-Light.ttf");
+}
+@keyframes toptoBotton {
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes lefttoright {
+  100% {
+    left: 0px;
+  }
+}
+
+header {
+  width: 100%;
+  background-image: url("./images/header-back.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  img {
+    position: relative;
+    top: 50px;
+    left: 20px;
+  }
+  nav {
+    display: flex;
+    .menu__item {
+      color: rgb(181, 181, 182);
+      text-decoration: none;
+      border-left: 1px solid rgb(180, 179, 179);
+      padding: 0 20px;
+      position: relative;
+      cursor: pointer;
+
+      .sub__menu {
+        background-color: rgb(53, 53, 53);
+        right: 0;
+        flex-direction: column;
+        display: none;
+        position: absolute;
+
+        .sub__menu__item {
+          padding: 10px 20px;
+          line-height: 40px;
+          text-decoration: none;
+          white-space: nowrap;
+          color: rgb(189, 186, 186);
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      &:hover {
+        .sub__menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .banner {
+    width: 100%;
+    background-image: linear-gradient(
+      to top,
+      rgb(210, 209, 209),
+      rgb(252, 247, 247)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+
+    .section_1 {
+      width: 450px;
+
+      h2 {
+        color: red;
+        font-family: iransans;
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      h3 {
+        color: #58595b;
+        font-size: 20px;
+      }
+      p {
+        color: rgb(153, 155, 156);
+        line-height: 35px;
+        padding-top: 20px;
+        animation: lefttoright 2s forwards;
+        position: relative;
+        left: 600px;
+      }
+      button {
+        color: rgb(163, 163, 164);
+        margin-top: 30px;
+        padding: 8px 20px;
+        font-family: iransans;
+        border: 1px solid rgb(227, 224, 224);
+        border-radius: 6px;
+        background-color: rgb(238, 240, 243);
+        font-weight: 100;
+        transition: all 180ms;
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+    .section_2 {
+      img {
+        animation: toptoBotton 2s forwards;
+        transform: translateY(-600px);
+      }
+    }
+  }
+  .hr_1,
+  .hr_2 {
+    margin-top: 15px;
+  }
+  .intoduction {
+    width: 100%;
+    background-color: white;
+    .section_3,
+    .section_4,
+    .section_5 {
+      width: 700px;
+      text-decoration: none;
+      padding-top: 40px;
+      margin: auto;
+      animation: lefttoright 2s forwards;
+      position: relative;
+      left: 600px;
+      h3 {
+        color: red;
+      }
+      p {
+        color: rgb(148, 147, 145);
+        padding-top: 20px;
+      }
+      span {
+        color: red;
+      }
+    }
+
+    .section_5 {
+      margin-bottom: 80px;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    background-color: white;
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    gap: 20px;
+    text-align: center;
+    transform: translateZ(-600);
+
+    p {
+      color: #78797b;
+      padding: 20px;
+    }
+  }
+
+  .product,
+  .product_2,
+  .product_3 {
+    width: 100%;
+    height: 500px;
+
+    background-size: cover;
+    border-bottom: 20px solid rgb(244, 222, 137);
+    position: relative;
+    .title {
+      font-family: iransans;
+      width: 280px;
+      padding: 6px;
+      text-align: right;
+      background-color: red;
+      color: white;
+      position: absolute;
+      bottom: -20px;
+      right: 300px;
+    }
+  }
+  .product {
+    background-image: url(./images/image2-new-1.jpg);
+  }
+  .product_2 {
+    background-image: url(./images/image3-new.jpg);
+  }
+  .product_3 {
+    background-image: url(./images/image4-new.jpg);
+  }
+  .hr_3,
+  .hr_4,
+  .hr_5 {
+    margin: 40px;
+  }
+
+  .intoduction_2,
+  .intoduction_3,
+  .intoduction_4 {
+    width: 700px;
+    text-decoration: none;
+    padding-top: 20px;
+    margin: 80px auto;
+    h3 {
+      color: red;
+      font-size: 20px;
+    }
+    p {
+      color: rgb(153, 155, 156);
+      line-height: 35px;
+      padding-top: 15px;
+    }
+    button {
+      color: rgb(146, 146, 147);
+      margin-top: 30px;
+      padding: 5px 20px;
+      font-family: iransans;
+      border: 1px solid rgb(155, 152, 152);
+      border-radius: 6px;
+      background-color: rgb(255, 255, 255);
+      font-weight: 100;
+      transition: all 180ms;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+
+  .background_img {
+    width: 100%;
+    height: 40vh;
+    background-image: url(./images/recipe-baner-1.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    margin: auto;
+  }
+  .magazine {
+    width: 100%;
+
+    h2 {
+      color: red;
+      margin: 40px 280px;
+    }
+  }
+  .brochure {
+    width: 100%;
+    height: 100vh;
+    direction: ltr;
+    background-image: linear-gradient(
+      to top,
+      rgb(225, 15, 15),
+      rgb(239, 159, 159)
+    );
+  }
+  .swiper {
+    width: 1200px;
+    height: 600px;
+    padding-top: 80px;
+    
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    .card {
+      width: 100%;
+      height: 80%;
+      margin-top: -130px;
+
+      .text {
+        line-height: 30px;
+        font-size: 15px;
+        direction: rtl;
+        padding: 20px;
+        h3 {
+          color: red;
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+        p {
+          color: #78797b;
+        }
+        button {
+          color: rgb(146, 146, 147);
+          margin-top: 30px;
+          padding: 5px 20px;
+          font-family: iransans;
+          border: 1px solid rgb(155, 152, 152);
+          border-radius: 6px;
+          background-color: rgb(255, 255, 255);
+          font-weight: 100;
+          transition: all 180ms;
+          &:hover {
+            background-color: red;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 18px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 90px auto;
+
+    .card {
+      width: 300px;
+      background-color: white;
+      cursor: pointer;
+
+      .card__info {
+        padding: 20px;
+        h3 {
+          color: red;
+          margin-left: 100px;
+        }
+        p {
+          color: rgb(141, 140, 140);
+        }
+        button {
+          color: rgb(163, 163, 164);
+          margin-top: 30px;
+          padding: 8px 20px;
+          font-family: iransans;
+          border: 1px solid rgb(227, 224, 224);
+          border-radius: 6px;
+          background-color: rgb(238, 240, 243);
+          font-weight: 100;
+          transition: all 180ms;
+          &:hover {
+            background-color: red;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(51, 167, 181);
+    border-bottom: 20px solid rgb(244, 222, 137);
+    position: relative;
+    .photo {
+      width: 300px;
+      height: 300px;
+      background-image: url(./images/csr-pic1.jpg);
+      margin: 10px auto;
+    }
+    .matn {
+      width: 100%;
+      text-align: center;
+      h2 {
+        padding-top: 150px;
+        color: rgb(119, 118, 118);
+      }
+      h3 {
+        color: rgb(14, 121, 82);
+        font-size: 30px;
+        span {
+          font-size: 20px;
+          color: rgb(6, 88, 58);
+        }
+      }
+      p {
+        color: #58595b;
+      }
+    }
+  }
+  .moarefi{
+    width: 700px;
+    text-decoration: none;
+    padding-top: 120px;
+    margin: auto;
+    animation: lefttoright 2s forwards;
+    position: relative;
+    left: 600px;
+    h2 {
+      color: red;
+    }
+    p {
+      color: rgb(148, 147, 145);
+      padding-top: 20px;
+      line-height: 40px;
+    
+    }
+    span {
+      color: red;
+    }
+    button {
+      color: rgb(146, 146, 147);
+      margin-top: 30px;
+      padding: 5px 20px;
+      font-family: iransans;
+      border: 1px solid rgb(155, 152, 152);
+      border-radius: 6px;
+      background-color: rgb(255, 255, 255);
+      font-weight: 100;
+      transition: all 180ms;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}
+footer{
+  .social{
+    width: 100%;
+    height: 95px;
+    background-color: #eeefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 50px;
+    .socialbox{
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      transition-property: all;
+      transition-duration: 100ms;
+      
+    }
+    .fecebook{
+      background-image: url(./images/fec.png);
+      &:hover{
+        background-image: url(./images/fec.rangi.png);
+      }
+    }
+    .linkdin{
+      background-image: url(./images/in.png);
+      &:hover{
+        background-image: url(./images/in.rangi.png);
+      }
+    }
+    .insta {
+      background-image: url(./images/inesta.png);
+      &:hover{
+        background-image: url(./images/instsa.rangi.png);
+      }
+    }
+    .telegram{
+      background-image: url(./images/tel.png);
+      &:hover{
+        background-image: url(./images/tel.rangi.png);
+      }
+    }
+    .aparat{
+      background-image: url(./images/aparat.png);
+      &:hover{
+        background-image: url(./images/aparat.rangi.png);
+      }
+    }
+    .gl{
+      background-image: url(./images/GL.png);
+      &:hover{
+        background-image: url(./images/GL.rangi.png);
+      }
+    }
+  }
+  .parent{
+    width: 100%;
+    height: 363.600px;
+    background-image: url(./images/header-back.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 80px;
+   .titre,.titre_2 , .titre_3,.titre_4{
+    color:rgb(182, 178, 178);
+    &:hover{
+      color: white;
+    }
+   }  
+      }
+
+
+
+
+
+
+
+}
