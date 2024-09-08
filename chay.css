@@ -120,7 +120,7 @@ main {
       }
     }
   }
-  .about {
+  .about_1 {
     width: 700px;
     text-decoration: none;
     padding-top: 40px;
@@ -142,7 +142,7 @@ main {
   }
   .hame {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 
     .all,
     .all2 {
@@ -181,7 +181,9 @@ main {
         text-align: justify;
         gap: 200px;
         h3 {
+          
           margin: 10px;
+          
           font-family: iransans;
           bottom: 1000px;
           font-size: 18px;
